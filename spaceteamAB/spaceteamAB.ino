@@ -304,8 +304,25 @@ void nextLevel(int threshold)
   buttonSetup();
   espnowSetup();
   timerSetup();
+  startTime = millis();
 }
 
+
+void checkGameOver(){
+  float timePassed = (millis() - startTime)/1000;
+  float maxTime = 60;
+  tft.fillRect(16, lineHeight * 2 + 14, 100 - (timePassed/maxTime * 100), 4, TFT_RED);
+  if (timePassed >= maxTime){
+    tft.fillScreen(TFT_RED);
+    tft.setTextSize(3);
+    tft.setTextColor(TFT_WHITE, TFT_BLUE);
+    tft.drawString("GAME", 45, 20, 2);
+    tft.drawString("OVER!", 20, 80, 2);
+    tft.drawString("Restarting in 5", 18, 130, 2);
+    delay(5000);
+    ESP.restart();
+  }
+}
 
 void loop() {
   currentTime = millis();
@@ -335,9 +352,7 @@ void loop() {
   if ((millis() - lastRedrawTime) > 50) {
     tft.fillRect(15, lineHeight * 2 + 14, 100, 6, TFT_GREEN);
     //tft.fillRect(16, lineHeight * 2 + 14 + 1, (((expireLength * 1000000.0) - timerRead(askExpireTimer)) / (expireLength * 1000000.0)) * 98, 4, TFT_RED);
-    float timePassed = (millis() - startTime)/1000;
-    float maxTime = 60;
-    tft.fillRect(16, lineHeight * 2 + 14, 100 - (timePassed/maxTime * 100), 4, TFT_RED);
+    checkGameOver();
     lastRedrawTime = millis();
   }
 
@@ -352,9 +367,9 @@ void loop() {
       tft.setTextSize(3);
       tft.setTextColor(TFT_WHITE, TFT_BLUE);
       threshold = threshold + 5; 
-      tft.drawString("GO", 45, 20, 2);
-      tft.drawString("COMS", 20, 80, 2);
-      tft.drawString("3930!", 18, 130, 2);
+      tft.drawString("Next", 45, 20, 2);
+      tft.drawString("Level", 20, 80, 2);
+      tft.drawString("Reached!", 18, 130, 2);
       delay(6000);
       nextLevel(threshold);
     } else {
