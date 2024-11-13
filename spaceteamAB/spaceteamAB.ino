@@ -36,6 +36,10 @@ volatile bool askExpired = false;
 hw_timer_t *askExpireTimer = NULL;
 int expireLength = 25;
 
+// Timer Logic
+unsigned long startTime;
+unsigned long currentTime;
+
 #define ARRAY_SIZE 10
 const String commandVerbs[ARRAY_SIZE] = { "Buzz", "Engage", "Floop", "Bother", "Twist", "Jingle", "Jangle", "Yank", "Press", "Play" };
 const String commandNounsFirst[ARRAY_SIZE] = { "foo", "dev", "bobby", "jaw", "tooty", "wu", "fizz", "rot", "tea", "bee" };
@@ -216,6 +220,8 @@ void setup() {
   buttonSetup();
   espnowSetup();
   timerSetup();
+
+  startTime = millis();
 }
 
 String genCommand() {
@@ -230,10 +236,42 @@ void drawControls() {
   cmd1 = genCommand();
   cmd2 = genCommand();
   cmd1.indexOf(' ');
-  tft.drawString("B1: " + cmd1.substring(0, cmd1.indexOf(' ')), 0, 90, 2);
-  tft.drawString(cmd1.substring(cmd1.indexOf(' ') + 1), 0, 90 + lineHeight, 2);
-  tft.drawString("B2: " + cmd2.substring(0, cmd2.indexOf(' ')), 0, 170, 2);
-  tft.drawString(cmd2.substring(cmd2.indexOf(' ') + 1), 0, 170 + lineHeight, 2);
+  // START OF MODIFICATION
+  tft.drawString("B1: " + chanceScramble(cmd1.substring(0, cmd1.indexOf(' '))), 0, 90, 2);
+  tft.drawString(chanceScramble(cmd1.substring(cmd1.indexOf(' ') + 1)), 0, 90 + lineHeight, 2);
+  tft.drawString("B2: " + chanceScramble(cmd2.substring(0, cmd2.indexOf(' '))), 0, 170, 2);
+  tft.drawString(chanceScramble(cmd2.substring(cmd2.indexOf(' ') + 1)), 0, 170 + lineHeight, 2);
+  // END OF MODIFICATION
+
+  // OLD CODE
+  // tft.drawString("B1: " + cmd1.substring(0, cmd1.indexOf(' ')), 0, 90, 2);
+  // tft.drawString(cmd1.substring(cmd1.indexOf(' ') + 1), 0, 90 + lineHeight, 2);
+  // tft.drawString("B2: " + cmd2.substring(0, cmd2.indexOf(' ')), 0, 170, 2);
+  // tft.drawString(cmd2.substring(cmd2.indexOf(' ') + 1), 0, 170 + lineHeight, 2);
+}
+
+// NEW METHOD ADDED
+String chanceScramble(String phrase) {
+  float scrambleProb = 1;
+  float wordDeleteProb = 0.3;
+  float r1 = float(random(0, 10))/10;
+  Serial.println((String)"r1: "+r1);
+  if (r1 < scrambleProb){
+    // Scramble phrase
+    int l = phrase.length();
+    String scrambled = "";
+    for (int i = 0; i < l; ++i){
+      float r2 = float(random(0,11))/10;
+      Serial.println((String)"r2: "+r2);
+      if (r2 < wordDeleteProb){
+        scrambled += "_";
+      } else {
+        scrambled += phrase.charAt(i);
+      }
+    }
+    return scrambled;
+  }
+  return phrase;
 }
 
 void nextLevel(int threshold)
@@ -270,6 +308,7 @@ void nextLevel(int threshold)
 
 
 void loop() {
+  currentTime = millis();
 
   if (scheduleCmd1Send) {
     broadcast("D: " + cmd1);
@@ -295,7 +334,10 @@ void loop() {
 
   if ((millis() - lastRedrawTime) > 50) {
     tft.fillRect(15, lineHeight * 2 + 14, 100, 6, TFT_GREEN);
-    tft.fillRect(16, lineHeight * 2 + 14 + 1, (((expireLength * 1000000.0) - timerRead(askExpireTimer)) / (expireLength * 1000000.0)) * 98, 4, TFT_RED);
+    //tft.fillRect(16, lineHeight * 2 + 14 + 1, (((expireLength * 1000000.0) - timerRead(askExpireTimer)) / (expireLength * 1000000.0)) * 98, 4, TFT_RED);
+    float timePassed = (millis() - startTime)/1000;
+    float maxTime = 60;
+    tft.fillRect(16, lineHeight * 2 + 14, 100 - (timePassed/maxTime * 100), 4, TFT_RED);
     lastRedrawTime = millis();
   }
 
