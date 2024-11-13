@@ -252,7 +252,7 @@ void drawControls() {
 
 // NEW METHOD ADDED
 String chanceScramble(String phrase) {
-  float scrambleProb = 1;
+  float scrambleProb = 0.4;
   float wordDeleteProb = 0.3;
   float r1 = float(random(0, 10))/10;
   Serial.println((String)"r1: "+r1);
@@ -314,11 +314,11 @@ void checkGameOver(){
   tft.fillRect(16, lineHeight * 2 + 14, 100 - (timePassed/maxTime * 100), 4, TFT_RED);
   if (timePassed >= maxTime){
     tft.fillScreen(TFT_RED);
-    tft.setTextSize(3);
+    tft.setTextSize(2);
     tft.setTextColor(TFT_WHITE, TFT_RED);
-    tft.drawString("GAME", 45, 20, 2);
+    tft.drawString("GAME", 20, 20, 2);
     tft.drawString("OVER!", 20, 80, 2);
-    tft.drawString("Restart in 5", 18, 130, 2);
+    tft.drawString("Resetting", 18, 130, 2);
     delay(5000);
     ESP.restart();
   }
@@ -364,10 +364,9 @@ void loop() {
 
     if (progress >= threshold) {
       tft.fillScreen(TFT_BLUE);
-      tft.setTextSize(3);
       tft.setTextColor(TFT_WHITE, TFT_BLUE);
       threshold = threshold + 5; 
-      tft.drawString("Next", 45, 20, 2);
+      tft.drawString("Next", 20, 20, 2);
       tft.drawString("Level", 20, 80, 2);
       tft.drawString("Reached!", 18, 130, 2);
       delay(6000);
