@@ -25,7 +25,7 @@ bool redrawCmdRecvd = false;
 
 // for drawing progress bars
 int progress = 0;
-int threshhold = 5; // number of commands answered correctly before move onto next level 
+int threshold = 5; // number of commands answered correctly before move onto next level 
 bool redrawProgress = true;
 int lastRedrawTime = 0;
 
@@ -236,6 +236,39 @@ void drawControls() {
   tft.drawString(cmd2.substring(cmd2.indexOf(' ') + 1), 0, 170 + lineHeight, 2);
 }
 
+void nextLevel(int threshold)
+{
+  cmd1 = "";
+  cmd2 = "";
+  scheduleCmd1Send = false;
+  scheduleCmd2Send = false;
+
+  cmdRecvd = "";
+  redrawCmdRecvd = false;
+
+  // for drawing progress bars
+  progress = 0;
+  threshold = threshold; // number of commands answered correctly before move onto next level 
+  redrawProgress = true;
+  lastRedrawTime = 0;
+
+  //we could also use xSemaphoreGiveFromISR and its associated fxns, but this is fine
+  scheduleCmdAsk = true;
+  //*askRequestTimer = NULL;
+  askExpired = false;
+  //*askExpireTimer = NULL;
+  expireLength = 25;
+  lineHeight = 30;
+
+  Serial.begin(115200);
+
+  textSetup();
+  buttonSetup();
+  espnowSetup();
+  timerSetup();
+}
+
+
 void loop() {
 
   if (scheduleCmd1Send) {
@@ -281,7 +314,7 @@ void loop() {
       tft.drawString("COMS", 20, 80, 2);
       tft.drawString("3930!", 18, 130, 2);
       delay(6000);
-      ESP.restart();
+      nextLevel(threshold);
     } else {
       tft.fillRect(15, lineHeight * 2 + 5, 100, 6, TFT_GREEN);
       tft.fillRect(16, lineHeight * 2 + 5 + 1, progress * (100/threshold), 4, TFT_BLUE); // 100/threshold scales the progress bar
