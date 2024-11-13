@@ -315,10 +315,10 @@ void checkGameOver(){
   if (timePassed >= maxTime){
     tft.fillScreen(TFT_RED);
     tft.setTextSize(3);
-    tft.setTextColor(TFT_WHITE, TFT_BLUE);
+    tft.setTextColor(TFT_WHITE, TFT_RED);
     tft.drawString("GAME", 45, 20, 2);
     tft.drawString("OVER!", 20, 80, 2);
-    tft.drawString("Restarting in 5", 18, 130, 2);
+    tft.drawString("Restart in 5", 18, 130, 2);
     delay(5000);
     ESP.restart();
   }
