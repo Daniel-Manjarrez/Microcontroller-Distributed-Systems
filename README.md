@@ -13,7 +13,7 @@ with one another to convey the different tasks that need to be done, and the per
 # Installation
 To install the game, you need at least 2 ESP32 displays and must be within close range to one another. Simply plug the ESP's into your computers and upload the attached code.
 
-![Gameplay gif]("Images and Video"/gameplay3.gif)
+![Gameplay gif](Media/gameplay3.gif)
 
 ![img1](https://github.com/user-attachments/assets/5b1c72fe-4dcd-4bae-a918-79f661c9bdd0)
 
