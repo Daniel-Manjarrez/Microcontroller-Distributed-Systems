@@ -1,4 +1,4 @@
-# Spaceteam
+# Microcontroller Distributed System: Spaceteam
 
 # About
 Spaceteam is a multiplayer game that uses the ESPNOW protocol where players must cooperate to completing various tasks in order to fix their ship and progress through levels. Players communicate
