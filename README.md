@@ -33,6 +33,13 @@ To play the game, you need at least 2 ESP32 displays within close range to one a
 3. Repeat previous step for the rest of the ESP32 microcontrollers you plan to use in the game and once they all have the game loaded, reset all of them at the same time to start a new game together.
 
 ## Design Process and Goals
+
+This game reference is the inspiration behind this ESP32 multiplayer game that depicts a set up controls coordinated by the players in the game.
+
+- Game Inspiration Reference:
+
+  ![Space Team](Media/spaceteam.jpg)
+
 - Implement an upgraded timer that causes a game over when expired
 - Erase random letters to make the game progressively more difficult
 - Added level up and game over screens
