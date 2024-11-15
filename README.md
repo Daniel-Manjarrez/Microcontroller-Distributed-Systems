@@ -5,6 +5,9 @@ with one another to convey the different tasks that need to be done, and the per
 
 *Here's a video of the game in action: https://youtube.com/shorts/rJZeuQ00o0s?feature=share*
 
+![Gameplay gif](Media/gameplay3.gif)
+![img1](https://github.com/user-attachments/assets/5b1c72fe-4dcd-4bae-a918-79f661c9bdd0)
+
 # Design Goals
 - Implement an upgraded timer that causes a game over when expired
 - Erase random letters to make the game progressively more difficult
@@ -13,10 +16,6 @@ with one another to convey the different tasks that need to be done, and the per
 
 # Installation
 To install the game, you need at least 2 ESP32 displays and must be within close range to one another. Simply plug the ESP's into your computers and upload the attached code.
-
-![Gameplay gif](Media/gameplay3.gif)
-
-![img1](https://github.com/user-attachments/assets/5b1c72fe-4dcd-4bae-a918-79f661c9bdd0)
 
 https://github.com/user-attachments/assets/83cf9d13-7d10-4751-9e9d-795be9a7f96e
 
