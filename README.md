@@ -15,6 +15,7 @@ You can take an in depth look at our process making this game in this blog [post
 
 - [Materials](#what-youll-need)
 - [Installation Process](#installation)
+- [Design Process](#design-process-and-goals)
 
 ## What You'll Need
  + [Arduino IDE](https://www.arduino.cc/en/software)
@@ -31,7 +32,7 @@ To play the game, you need at least 2 ESP32 displays within close range to one a
 
 3. Repeat previous step for the rest of the ESP32 microcontrollers you plan to use in the game and once they all have the game loaded, reset all of them at the same time to start a new game together.
 
-## Design Goals
+## Design Process and Goals
 - Implement an upgraded timer that causes a game over when expired
 - Erase random letters to make the game progressively more difficult
 - Added level up and game over screens
