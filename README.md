@@ -23,7 +23,7 @@ You can take an in depth look at our process making this game in this blog [post
 
 ## Installation
 To play the game, you need at least 2 ESP32 displays within close range to one another (*around 220 meters*)
-1. Download the `spaceteamAB` folder and open the arduino sketch file inside named `spaceteamAB.ino` on Arduino IDE
+1. Download the `spaceteamAB` folder and open arduino sketch file inside named `spaceteamAB.ino` on Arduino IDE
     * If Arduino IDE is not installed, check the [Arduino Support Page](https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE) to learn how to install it
 
 ## Design Goals
