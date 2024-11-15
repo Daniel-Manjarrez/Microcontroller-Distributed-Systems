@@ -53,7 +53,15 @@ We decided to build upon the original game by addressing the two main problems w
 
 ## Demos
 
+This video showcases the invidual player interaction with the game program.
+
+- Final Individual Player Game Interaction Video:
+
 [video1](https://github.com/user-attachments/assets/83cf9d13-7d10-4751-9e9d-795be9a7f96e)
+
+This video showcases the cooperative player interaction with the game program.
+
+- Final Cooperative Players Game Interaction Video:
 
 [video2](https://github.com/user-attachments/assets/53e23620-4f81-429a-8b57-224842b80c5d)
 
