@@ -40,12 +40,12 @@ This game reference is the inspiration behind this ESP32 multiplayer game that d
 
   ![Space Team](Media/spaceteam.jpg)
 
-We decided to build upon the original game by addressing the two main problems we had: lack of progression & lack of dynamic gameplay.
+We decided to build upon the original game by addressing the two main problems we had which were a lack of a progression system as well as a lack of dynamic gameplay. To remedy this issue we implemented the following changes to the code.
 
-- Implement an upgraded timer that causes a game over when expired
-- Erase random letters to make the game progressively more difficult
-- Added level up and game over screens
-- Restarting the game when over
+- Implement an upgraded challenge timer shared across all players that causes a game over when expired
+- Erasure of random letters to make the game progressively more difficult as the players continue playing
+- Added level up system with generating longer levels with round completion and game over screens
+- Restarting the game when the players reach a game over screen
 
 ![img1](https://github.com/user-attachments/assets/5b1c72fe-4dcd-4bae-a918-79f661c9bdd0)
 
