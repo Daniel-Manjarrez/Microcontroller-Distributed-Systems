@@ -34,7 +34,7 @@ To play the game, you need at least 2 ESP32 displays within close range to one a
 
 ## Design Process and Goals
 
-This game reference is the inspiration behind this ESP32 multiplayer game that depicts a set up controls coordinated by the players in the game.
+This game reference is the inspiration behind this ESP32 multiplayer game that depicts a set of controls coordinated by the players in the game through communicating the tasks they must complete on each of their screens.
 
 - Game Inspiration Reference:
 
