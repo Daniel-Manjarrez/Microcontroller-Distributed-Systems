@@ -9,7 +9,7 @@ with one another to convey the different tasks that need to be done, and the per
 
 ## Blog Post
 
-You can take an in depth look at our process making this game in this blog [post](https://brassy-moonflower-6cd.notion.site/Slice-and-Spice-S2-12d18fb9102d80a786a9e72461ec0fd8?pvs=4)
+You can take an in depth look at our process making this game in this blog [post](https://brassy-moonflower-6cd.notion.site/Super-Spaceteam-Saga-S3-13f18fb9102d80bf88ede1882c1b07a2?pvs=4)
 
 ## Table of Contents
 
