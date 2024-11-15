@@ -1,4 +1,4 @@
-# Microcontroller Distributed System Spaceteam
+# Microcontroller Distributed Systems Spaceteam
 
 Spaceteam is a multiplayer game designed for an ESP32 microcontroller that uses the ESPNOW protocol where players must cooperate to completing various tasks in order to fix their ship and progress through levels. Players communicate
 with one another to convey the different tasks that need to be done, and the person with the task available will press the corresponding button to complete the task. We wanted to build on the Spaceteam implementation found [here](https://github.com/ttseng/COMS3930-Fall2024/blob/main/Module%203/espaceteam.ino)
