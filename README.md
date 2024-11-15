@@ -27,7 +27,7 @@ To play the game, you need at least 2 ESP32 displays within close range to one a
     * If Arduino IDE is not installed, check the [Arduino Support Page](https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE) to learn how to install it
 
 2. Once everything is set up, you can connect your ESP32 to your computer via USB-C and click on the `Upload` sketch button on the top left of the Arduino IDE after selecting your board and appropriate configurations. This will make the code compile and store onto the ESP32.
-![Connection Shown](Media/spaceimg.png
+![Connection Shown](Media/spaceimg.png)
 
 3. Repeat 2nd step for the rest of the ESP32 microcontrollers you plan to use in the game and once they all have the game loaded, reset all of them at the same time to start a new game together.
 
