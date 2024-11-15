@@ -21,7 +21,7 @@ You can take an in depth look at our process making this game in this blog [post
  + [More Than One ESP32 TTGO T-display Microcontroller](https://www.amazon.com/LILYGO-T-Display-Arduino-Development-CH9102F/dp/B099MPFJ9M?th=1)
 
 ## Installation
-To install the game, you need at least 2 ESP32 displays and must be within close range to one another. Simply plug the ESP's into your computers and upload the attached code.
+To install the game, you need at least 2 ESP32 displays and must be within close range to one another (around 220 meters)
 
 ## Design Goals
 - Implement an upgraded timer that causes a game over when expired
