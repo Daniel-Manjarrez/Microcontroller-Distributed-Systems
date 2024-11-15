@@ -26,6 +26,9 @@ To play the game, you need at least 2 ESP32 displays within close range to one a
 1. Download the `spaceteamAB` folder and open arduino sketch file inside named `spaceteamAB.ino` on Arduino IDE
     * If Arduino IDE is not installed, check the [Arduino Support Page](https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE) to learn how to install it
 
+2. Once everything is set up, you can connect your ESP32 to your computer via USB-C and click on the `Upload` sketch button on the top left of the Arduino IDE after selecting your board and appropriate configurations. This will make the code compile and store onto the ESP32.
+![Connection Shown](Media/spaceimg.png)
+
 ## Design Goals
 - Implement an upgraded timer that causes a game over when expired
 - Erase random letters to make the game progressively more difficult
