@@ -53,9 +53,9 @@ We decided to build upon the original game by addressing the two main problems w
 
 ## Demos
 
-https://github.com/user-attachments/assets/83cf9d13-7d10-4751-9e9d-795be9a7f96e
+![video1](https://github.com/user-attachments/assets/83cf9d13-7d10-4751-9e9d-795be9a7f96e)
 
-https://github.com/user-attachments/assets/53e23620-4f81-429a-8b57-224842b80c5d
+![video2](https://github.com/user-attachments/assets/53e23620-4f81-429a-8b57-224842b80c5d)
 
 ## Contributors
 
