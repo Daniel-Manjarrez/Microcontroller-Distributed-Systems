@@ -10,7 +10,7 @@ with one another to convey the different tasks that need to be done, and the per
 
 ## Blog Post
 
-You can take an in depth look at our process making this device and program in this blog [post](https://brassy-moonflower-6cd.notion.site/Slice-and-Spice-S2-12d18fb9102d80a786a9e72461ec0fd8?pvs=4) (Daniel)
+You can take an in depth look at our process making this game in this blog [post](https://brassy-moonflower-6cd.notion.site/Slice-and-Spice-S2-12d18fb9102d80a786a9e72461ec0fd8?pvs=4) (Daniel)
 
 ## Design Goals
 - Implement an upgraded timer that causes a game over when expired
