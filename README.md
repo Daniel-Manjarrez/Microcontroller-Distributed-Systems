@@ -14,6 +14,7 @@ You can take an in depth look at our process making this game in this blog [post
 ## Table of Contents
 
 - [Materials](#what-youll-need)
+- [Installation Process](#installation)
 
 ## What You'll Need
  + [Arduino IDE](https://www.arduino.cc/en/software)
