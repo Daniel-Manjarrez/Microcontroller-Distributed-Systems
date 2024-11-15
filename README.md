@@ -16,6 +16,8 @@ You can take an in depth look at our process making this game in this blog [post
 - [Materials](#what-youll-need)
 - [Installation Process](#installation)
 - [Design Process](#design-process-and-goals)
+- [Demos](#demos)
+- [Contributors](#contributors)
 
 ## What You'll Need
  + [Arduino IDE](https://www.arduino.cc/en/software)
@@ -49,6 +51,15 @@ We decided to build upon the original game by addressing the two main problems w
 
 ![img1](https://github.com/user-attachments/assets/5b1c72fe-4dcd-4bae-a918-79f661c9bdd0)
 
+## Demos
+
 https://github.com/user-attachments/assets/83cf9d13-7d10-4751-9e9d-795be9a7f96e
 
 https://github.com/user-attachments/assets/53e23620-4f81-429a-8b57-224842b80c5d
+
+## Contributors
+
+- Daniel Manjarrez
+- Alex Baril
+- David Lee
+- Luke Park
