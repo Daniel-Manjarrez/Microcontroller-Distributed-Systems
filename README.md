@@ -46,7 +46,7 @@ We decided to build upon the original game by addressing the two main problems w
 
 - Implement an upgraded challenge timer shared across all players that causes a game over when expired
 - Erasure of random letters to make the game progressively more difficult as the players continue playing
-- Added level up system with generating longer levels with round completion and game over screens
+- Added a level up system with generating longer levels with round completion and game over screens
 - Restarting the game when the players reach a game over screen
 
 ![img1](https://github.com/user-attachments/assets/5b1c72fe-4dcd-4bae-a918-79f661c9bdd0)
