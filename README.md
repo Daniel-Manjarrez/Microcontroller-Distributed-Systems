@@ -61,7 +61,7 @@ This video showcases the invidual player interaction with the game program.
 
 This video showcases the cooperative player interaction with the game program.
 
-- Final Cooperative Players Game Interaction Video:
+- Final Cooperative Player Game Interaction Video:
 
 [video2](https://github.com/user-attachments/assets/53e23620-4f81-429a-8b57-224842b80c5d)
 
